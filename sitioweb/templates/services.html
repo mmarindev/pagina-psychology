@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/botoninicio.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/servicesstyle.css')}}">
+</head>
+
+<body>
+    <button class="back-to-home" id="backToHome">
+        <i class="fas fa-home"></i>
+        Volver a Inicio
+    </button>
+    <section class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service">
+            <i class="fas fa-user"></i>
+            <h3>Terapia Individual</h3>
+            <p>Ofrecemos terapia personalizada para abordar tus desafíos emocionales de manera efectiva y confidencial.
+            </p>
+        </div>
+        <div class="service">
+            <i class="fas fa-users"></i>
+            <h3>Terapia de Pareja</h3>
+            <p>Guiamos a las parejas hacia una comunicación más saludable y una relación sólida y armoniosa.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-home"></i>
+            <h3>Terapia Familiar</h3>
+            <p>Ayudamos a las familias a superar conflictos y fortalecer sus vínculos para crear un entorno amoroso.</p>
+        </div>
+    </section>
+    <script>
+        const backToHomeButton = document.getElementById("backToHome");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                backToHomeButton.style.opacity = "0";
+                backToHomeButton.style.transform = "translateX(1)";
+            } else {
+                backToHomeButton.style.opacity = "1";
+                backToHomeButton.style.transform = "translateX(-20px)";
+            }
+        });
+
+        backToHomeButton.addEventListener("click", () => {
+            window.location.href = "http://127.0.0.1:5000/"; // Cambia "index.html" con la URL de tu página de inicio
+        });
+    </script>
+</body>
+
+</html>

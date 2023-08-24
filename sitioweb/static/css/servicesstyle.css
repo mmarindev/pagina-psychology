@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.services {
+    padding: 100px 0;
+    text-align: center;
+    color: #f7f3f3;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeUp 1s forwards;
+}
+
+.service {
+    background-color: #3498db;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeUp 1s 0.5s forwards;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.service i {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

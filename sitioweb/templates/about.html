@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Psicología</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/aboutcompain.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/botoninicio.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+</head>
+
+<body>
+    <button class="back-to-home" id="backToHome">
+        <i class="fas fa-home"></i>
+        Volver a Inicio
+    </button>
+    <section class="about">
+        <div class="about-content">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos un equipo de psicólogos comprometidos en brindar apoyo integral para tu bienestar emocional y
+                mental. Nuestra misión es proporcionarte las herramientas y el acompañamiento necesario para enfrentar
+                los desafíos de la vida y alcanzar un equilibrio emocional duradero. Creemos en la importancia de la
+                terapia personalizada y el enfoque en el crecimiento personal en un ambiente de confianza y respeto.</p>
+        </div>
+        <div class="about-image">
+            <img src="https://cdn.ufidelitas.ac.cr/wp-content/uploads/2021/08/07081942/89904978_l.jpg"
+                alt="Nuestra Oficina">
+        </div>
+        <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </section>
+    <script>
+        const backToHomeButton = document.getElementById("backToHome");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                backToHomeButton.style.opacity = "0";
+                backToHomeButton.style.transform = "translateX(1)";
+            } else {
+                backToHomeButton.style.opacity = "1";
+                backToHomeButton.style.transform = "translateX(-20px)";
+            }
+        });
+
+        backToHomeButton.addEventListener("click", () => {
+            window.location.href = "http://127.0.0.1:5000/"; // Cambia con la URL de tu página de inicio
+        });
+    </script>
+</body>
+
+</html>

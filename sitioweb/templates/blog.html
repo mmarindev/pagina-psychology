@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/botoninicio.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/blogstyle.css')}}">
+
+</head>
+
+<body>
+    <button class="back-to-home" id="backToHome">
+        <i class="fas fa-home"></i>
+        Volver a Inicio
+    </button>
+
+    <section class="blog">
+        <h2>Nuestro Blog</h2>
+        <div class="blog-post">
+            
+            <h3>Los Beneficios de la Terapia Individual</h3>
+            <p>La terapia individual puede ser una herramienta poderosa para abordar desafíos emocionales y mentales.
+                Aprende cómo la terapia personalizada puede ayudarte a alcanzar un mayor bienestar y autoconocimiento. <a href="#">Leer
+                    más</a></p>
+        </div>
+        <div class="blog-post">
+            <h3>Consejos para Mantener una Salud Mental Equilibrada</h3>
+            <p>Nuestra salud mental es tan importante como nuestra salud física. Descubre algunos consejos prácticos
+                para mantener un equilibrio emocional y mental en la vida cotidiana. <a href="#">Leer más</a>
+            </p>
+        </div>
+        <div class="blog-post">
+            <h3>El Rol de la Terapia Familiar en la Resolución de Conflictos</h3>
+            <p>Las dinámicas familiares pueden ser complejas y desafiantes. Exploramos cómo la terapia familiar puede
+                ayudar a resolver conflictos, mejorar la comunicación y fortalecer los lazos entre los miembros de la
+                familia. <a href="#">Leer más</a>
+            </p>
+        </div>
+    </section>
+    <script>
+        const backToHomeButton = document.getElementById("backToHome");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                backToHomeButton.style.opacity = "0";
+                backToHomeButton.style.transform = "translateX(1)";
+            } else {
+                backToHomeButton.style.opacity = "1";
+                backToHomeButton.style.transform = "translateX(-20px)";
+            }
+        });
+
+        backToHomeButton.addEventListener("click", () => {
+            window.location.href = "http://127.0.0.1:5000/"; // Cambia con la URL de tu página de inicio
+        });
+    </script>
+</body>
+
+</html>
